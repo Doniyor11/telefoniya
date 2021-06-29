@@ -5,3 +5,13 @@
     display: -webkit-flex;
     display: flex;
 }
+
+// box-shadow
+@mixin shadow (
+    $offset-x: 3px,
+    $offset-y: 2px,
+    $blur-radius: 3px,
+    $spread-radius: 2px,
+    $color: rgba(0, 0, 0, 0.2)) {
+        box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
+    }
