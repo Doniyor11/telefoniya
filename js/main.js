@@ -6,20 +6,21 @@ class ChangeColorTheme {
         // use string for the target argument, eg ".switch-color"
         this.target = document
             .querySelector(target)
-            .addEventListener("click", this.toggleTheme.bind(this))
+            .addEventListener("click", this.toggleTheme.bind(this));
 
-        this.fg = window
-            .getComputedStyle(document.body)
-            .getPropertyValue("background-color")
-
-        this.bg = window
-            .getComputedStyle(document.body)
-            .getPropertyValue("color")
+        this.fg = ChangeColorTheme._getProperty("background-color");
+        this.bg = ChangeColorTheme._getProperty("color");
     }
 
     toggleTheme() {
         [this.fg, this.bg] = [this.bg, this.fg];
         document.body.style.backgroundColor = this.fg;
         document.body.style.color = this.bg;
+    }
+
+    static _getProperty(property) {
+        return window
+            .getComputedStyle(document.body)
+            .getPropertyValue(property);
     }
 }
