@@ -6,7 +6,7 @@
     display: flex;
 }
 
-// box-shadow
+// box-shadows
 @mixin shadow (
     $offset-x: 3px,
     $offset-y: 2px,
@@ -15,3 +15,7 @@
     $color: rgba(0, 0, 0, 0.2)) {
         box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
     }
+
+@mixin shadow-small {
+    @include shadow(1px, 1px, 3px, 1px, rgba(0, 0, 0, 0.1))
+}
