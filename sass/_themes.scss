@@ -10,15 +10,15 @@ $white: rgb(255, 255, 255);
 
 // CSS custom properties are used instead of SASS variables so that they can be targeted with JavaScript
 :root {
-    --primary-color-default: #{$primary-color};
-    --primary-color-lighter: #{lighten($primary-color, $color-change-big)};
     --primary-color-lightest: #{lighten($primary-color, $color-change-big * 2)};
+    --primary-color-lighter: #{lighten($primary-color, $color-change-big)};
+    --primary-color-default: #{$primary-color};
     --primary-color-darker: #{darken($primary-color, $color-change-big)};
     --primary-color-darkest: #{darken($primary-color, $color-change-big * 2)};
 
-    --secondary-color-default: #{$secondary-color};
-    --secondary-color-lighter: #{lighten($secondary-color, $color-change-big)};
     --secondary-color-lightest: #{lighten($secondary-color, $color-change-big * 2)};
+    --secondary-color-lighter: #{lighten($secondary-color, $color-change-big)};
+    --secondary-color-default: #{$secondary-color};
     --secondary-color-darker: #{darken($secondary-color, $color-change-big)};
     --secondary-color-darkest: #{darken($secondary-color, $color-change-big * 2)};
 
