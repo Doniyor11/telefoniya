@@ -24,3 +24,16 @@ class ChangeColorTheme {
             .getPropertyValue(property);
     }
 }
+
+// DOM manipulation helper functions
+function select(item) {
+    return document.querySelector(item);
+}
+
+function selectAll(item) {
+    return document.querySelectorAll(item);
+}
+
+function create(element) {
+    return document.createElement(element)
+}
