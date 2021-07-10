@@ -1,3 +1,5 @@
+@import "mixins"; 
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
@@ -5,4 +7,8 @@ body {
     line-height: 1.6;
     color: var(--black-older);
     background-color: var(--white-older);
+}
+
+.btn {
+    @include button;
 }
