@@ -21,16 +21,12 @@
 }
 
 // button
-@mixin button($bg: --primary-color-default) {
-    background-color: var($bg);
+@mixin button($bg: $primary-color) {
+    @include shadow-small;
+
+    background-color: $bg;
     border: none;
     padding: 0.2vw 0.5vw;
     border-radius: 5px;
-
     transition: all 0.3s;
-
-    &:hover {
-        cursor: pointer;
-        background-color: var(--primary-color-lighter);
-    }
 }
