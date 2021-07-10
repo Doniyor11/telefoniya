@@ -51,3 +51,12 @@
         background-color: #{lighten($bg, $change)};
     }
 }
+
+// centering block level elements
+// does not work with inline and inline-block level elements
+@mixin centered-block($width: 60vw) {
+    width: $width;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+}
