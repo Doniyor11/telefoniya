@@ -6,6 +6,7 @@ $primary-color: rgb(230, 70, 70);
 $secondary-color: rgb(226, 165, 50);
 
 $black: rgb(0, 0, 0);
+$grey: rgb(128, 128, 128);
 $white: rgb(255, 255, 255);
 
 // CSS custom properties are used instead of SASS variables so that they can be targeted with JavaScript
@@ -26,7 +27,13 @@ $white: rgb(255, 255, 255);
     --white-older: #{darken($white, $color-change-small)};
     --white-oldest: #{darken($white, $color-change-small * 2)};
 
-    --black-absolute: #{$black};
-    --black-older: #{lighten($black, $color-change-small)};
+    --grey-color-lightest: #{lighten($grey, $color-change-big * 2)};
+    --grey-color-lighter: #{lighten($grey, $color-change-big)};
+    --grey-color-default: #{$grey};
+    --grey-color-darker: #{darken($grey, $color-change-big)};
+    --grey-color-darkest: #{darken($grey, $color-change-big * 2)};
+
     --black-oldest: #{lighten($black, $color-change-small * 2)};
+    --black-older: #{lighten($black, $color-change-small)};
+    --black-absolute: #{$black};
 }
