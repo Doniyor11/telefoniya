@@ -30,3 +30,24 @@
     border-radius: 5px;
     transition: all 0.3s;
 }
+
+// button that changes color after hover
+// SASS variables or valid CSS colors must be used as an $bg parameter
+// CSS property is not valid argument for $bg parameter
+@mixin button-dark($bg: $primary-color, $change: 15%) {
+    @include button($bg);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #{darken($bg, $change)};
+    }
+}
+
+@mixin button-light($bg: $primary-color, $change: 15%) {
+    @include button($bg);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #{lighten($bg, $change)};
+    }
+}
