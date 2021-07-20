@@ -1,39 +1,42 @@
-// to be customized for each project
-$color-change-small: 5%;
-$color-change-big: 17%;
+// to be extended and/or modified for each project
+html {
+    &[data-theme="one"] {
+        --color-1: rgb(207, 92, 92);
+        --color-2: rgb(211, 123, 123);
+        --color-3: rgb(104, 23, 23);
+    
+        --color-4: rgb(98, 145, 44);
+        --color-5: rgb(55, 175, 31);
+        --color-6: rgb(24, 138, 67);
+    
+        --grey-1: rgb(207, 207, 207);
+        --grey-2: rgb(158, 158, 158);
+        --grey-3: rgb(92, 92, 92);
+    
+        --fg-1: rgb(12, 12, 12);
+        --fg-2: rgb(32, 32, 32);
+    
+        --bg-1: rgb(241, 241, 241);
+        --bg-2: rgb(223, 223, 223);    
+    }
 
-$primary-color: rgb(230, 70, 70);
-$secondary-color: rgb(226, 165, 50);
-
-$black: rgb(0, 0, 0);
-$grey: rgb(128, 128, 128);
-$white: rgb(255, 255, 255);
-
-// CSS custom properties are used instead of SASS variables so that they can be targeted with JavaScript
-:root {
-    --primary-color-lightest: #{lighten($primary-color, $color-change-big * 2)};
-    --primary-color-lighter: #{lighten($primary-color, $color-change-big)};
-    --primary-color-default: #{$primary-color};
-    --primary-color-darker: #{darken($primary-color, $color-change-big)};
-    --primary-color-darkest: #{darken($primary-color, $color-change-big * 2)};
-
-    --secondary-color-lightest: #{lighten($secondary-color, $color-change-big * 2)};
-    --secondary-color-lighter: #{lighten($secondary-color, $color-change-big)};
-    --secondary-color-default: #{$secondary-color};
-    --secondary-color-darker: #{darken($secondary-color, $color-change-big)};
-    --secondary-color-darkest: #{darken($secondary-color, $color-change-big * 2)};
-
-    --white-absolute: #{$white};
-    --white-older: #{darken($white, $color-change-small)};
-    --white-oldest: #{darken($white, $color-change-small * 2)};
-
-    --grey-color-lightest: #{lighten($grey, $color-change-big * 2)};
-    --grey-color-lighter: #{lighten($grey, $color-change-big)};
-    --grey-color-default: #{$grey};
-    --grey-color-darker: #{darken($grey, $color-change-big)};
-    --grey-color-darkest: #{darken($grey, $color-change-big * 2)};
-
-    --black-oldest: #{lighten($black, $color-change-small * 2)};
-    --black-older: #{lighten($black, $color-change-small)};
-    --black-absolute: #{$black};
+    &[data-theme="two"] {
+        --color-1: rgb(53, 90, 146);
+        --color-2: rgb(88, 143, 194);
+        --color-3: rgb(60, 40, 153);
+    
+        --color-4: rgb(172, 173, 98);
+        --color-5: rgb(119, 158, 29);
+        --color-6: rgb(179, 176, 48);
+    
+        --grey-1: rgb(207, 207, 207);
+        --grey-2: rgb(158, 158, 158);
+        --grey-3: rgb(92, 92, 92);
+    
+        --fg-1: rgb(245, 245, 245);
+        --fg-2: rgb(221, 221, 221);
+    
+        --bg-1: rgb(14, 14, 14);
+        --bg-2: rgb(32, 32, 32);    
+    }
 }
