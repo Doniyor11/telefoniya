@@ -1,27 +1,22 @@
 "use strict";
 
-// to be extended... currently only swaps color ←→ background-color
-class ChangeColorTheme {
-    constructor(target) {
-        // use string for the target argument, eg ".switch-color"
-        this.target = document
-            .querySelector(target)
-            .addEventListener("click", this.toggleTheme.bind(this));
+class Theme {
+    constructor(toBindListener) {
+        select(toBindListener).addEventListener("click", this.change.bind(this));
+        this.htmlDatasets = select("html").dataset;
 
-        this.fg = ChangeColorTheme._getProperty("background-color");
-        this.bg = ChangeColorTheme._getProperty("color");
+        // color schema has to be first created (_themes.scss) before it can be added to this.colorSchemas
+        this.colorSchemas = ["one", "two"];
+        this.idx = 0;
+
+        // automatically sets first color theme from this.colorSchemas
+        this.change();
     }
 
-    toggleTheme() {
-        [this.fg, this.bg] = [this.bg, this.fg];
-        document.body.style.backgroundColor = this.fg;
-        document.body.style.color = this.bg;
-    }
-
-    static _getProperty(property) {
-        return window
-            .getComputedStyle(document.body)
-            .getPropertyValue(property);
+    change() {
+        const theme = this.colorSchemas[this.idx % this.colorSchemas.length];
+        this.htmlDatasets.theme = theme;
+        this.idx++;
     }
 }
 
@@ -36,4 +31,12 @@ function selectAll(item) {
 
 function create(element) {
     return document.createElement(element);
+}
+
+function cl(item) {
+    console.log(item);
+}
+
+function cd(item) {
+    console.dir(item);
 }
