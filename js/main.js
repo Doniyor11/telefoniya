@@ -20,6 +20,8 @@ class Theme {
     }
 }
 
+//new Theme("html");
+
 // DOM manipulation helper functions
 function select(item) {
     return document.querySelector(item);

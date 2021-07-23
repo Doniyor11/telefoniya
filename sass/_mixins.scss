@@ -21,7 +21,7 @@
 }
 
 // button
-@mixin button($bg: $primary-color) {
+@mixin button($bg: rgb(209, 72, 72)) {
     @include shadow-small;
 
     background-color: $bg;
@@ -34,7 +34,7 @@
 // button that changes color after hover
 // SASS variables or valid CSS colors must be used as an $bg parameter
 // CSS property is not valid argument for $bg parameter
-@mixin button-dark($bg: $primary-color, $change: 15%) {
+@mixin button-dark($bg: rgb(209, 72, 72), $change: 15%) {
     @include button($bg);
 
     &:hover {
@@ -43,7 +43,7 @@
     }
 }
 
-@mixin button-light($bg: $primary-color, $change: 15%) {
+@mixin button-light($bg: rgb(209, 72, 72), $change: 15%) {
     @include button($bg);
 
     &:hover {
