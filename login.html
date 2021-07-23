@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="one">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ↓↓↓ TO BE POPULATED ↓↓↓ -->
+    <!-- <meta name="description" content=""> -->
+    <!-- <meta name="keywords" content=""> -->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+    <title>ОБЗВАНИВАТЕЛЬ 3000</title>
+</head>
+<body>
+<div class="login_wrapper">
+    <div class="login_wrapper-header">
+        <p class="login_title">ОБЗВАНИВАТЕЛЬ 3000</p>
+    </div>
+    <div class="login_wrapper-form">
+        <form action="login.php" method="post" class="login_form">
+            <h4 class="form_title">Вход в Обзваниватель 3000</h4>
+            <div class="input active">
+                <input type="email" id="1" required class="test"/>
+                <label for="1">Электронная почта</label>
+            </div>
+            <div class="input active">
+                <input type="password" id="2" class=""/>
+                <label for="1">Пароль</label>
+            </div>
+
+            <div class="login_wrapper-button">
+                <button type="submit" class="disabled">Войти</button>
+            </div>
+            <a href="" class="login_wrapper-reset">
+                Напомнить пароль
+            </a>
+        </form>
+    </div>
+    <!--  Восстановление пароля  -->
+    <div class="login_wrapper-form">
+        <form action="login.php" method="post" class="login_form">
+            <h4 class="form_title">Восстановление пароля</h4>
+            <div class="input active">
+                <input type="email" id="3" required class="test"/>
+                <label for="3">Электронная почта</label>
+            </div>
+
+            <div class="login_wrapper-button">
+                <button type="submit" class="disabled">Восстановление пароля</button>
+            </div>
+            <a href="" class="login_wrapper-reset">
+                <img src="img/icons-right_arrow.svg" alt="">
+                Напомнить пароль
+            </a>
+        </form>
+    </div>
+</div>
+</body>
+</html>

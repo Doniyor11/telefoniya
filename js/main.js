@@ -1,24 +1,14 @@
 "use strict";
 
-class Theme {
-    constructor(toBindListener) {
-        select(toBindListener).addEventListener("click", this.change.bind(this));
-        this.htmlDatasets = select("html").dataset;
 
-        // color schema has to be first created (_themes.scss) before it can be added to this.colorSchemas
-        this.colorSchemas = ["one", "two"];
-        this.idx = 0;
+const moreButton = document.querySelector(".more__btn");
 
-        // automatically sets first color theme from this.colorSchemas
-        this.change();
-    }
+// click more button open 1  2 3 modal window
 
-    change() {
-        const theme = this.colorSchemas[this.idx % this.colorSchemas.length];
-        this.htmlDatasets.theme = theme;
-        this.idx++;
-    }
-}
+moreButton.addEventListener("click", function () {
+    const modal = document.querySelector(".modal");
+    modal.classList.add("modal--visible");
+});
 
 //new Theme("html");
 
